@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Philosopher", sans-serif;
+  background: #EBE7E6;
+  color: #000000;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  padding: auto 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav .nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+nav .nav-center .nav-header p {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: xx-large;
+}
+nav .nav-center .nav-header p span {
+  color: #D31B27;
+}
+nav .nav-center .nav-links .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav .nav-center .nav-links .links li {
+  padding: 0 1.5rem;
+}
+nav .nav-center .nav-links .links li a {
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+nav .nav-center .nav-links .links li a:active {
+  color: #D31B27;
+}
+nav .nav-center .nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nav-center .nav-right .icon-box {
+  margin-right: 1rem;
+  position: relative;
+}
+nav .nav-center .nav-right .icon-box .icon-badge {
+  position: absolute;
+  background-color: #D31B27;
+  padding: 3.5px;
+  border-radius: 50%;
+  top: -2px;
+  left: 14px;
+}
+nav .nav-center .nav-right .icon-box .icon {
+  font-size: large;
+}
+nav .nav-center .nav-right .nav-button {
+  background-color: #D31B27;
+  color: white;
+  padding: 0.7rem 2.1rem;
+  border: 1px solid #D31B27;
+  border-radius: 1.5rem;
+}
+
+.hero {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.hero .hero-text {
+  padding: 2rem 0 0 2rem;
+}
+.hero .hero-text p {
+  font-weight: 700;
+  color: #000000;
+  font-size: 60px;
+  line-height: 3.5rem;
+  letter-spacing: 0.15rem;
+}
+.hero .hero-text .hero-button button {
+  margin: 1rem 0.4rem 1rem 0;
+  background-color: #D31B27;
+  color: white;
+  padding: 0.7rem 2.1rem;
+  border: 1px solid #D31B27;
+  border-radius: 1.5rem;
+}
+.hero .hero-text .hero-button .white-button {
+  background-color: white;
+  color: #000000;
+  border: 1px solid white;
+}
+.hero .hero-text .reviews {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+.hero .hero-text .reviews p {
+  font-size: smaller;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  font-family: sans-serif;
+}
+.hero .hero-text .reviews .review-img .rounded {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: -13px;
+}
+.hero .hero-text .reviews .review-img .first {
+  background-image: url("/src/image/first.jpeg");
+  background-size: 100% 100%;
+  margin-left: 0px;
+}
+.hero .hero-text .reviews .review-img .second {
+  background-image: url("/src/image/second.jpeg");
+  background-size: 100% 100%;
+}
+.hero .hero-text .reviews .review-img .third {
+  background-image: url("/src/image/third.jpg");
+  background-size: 100% 100%;
+}
+.hero .hero-text .reviews .review-img .last {
+  background-color: rgb(39, 38, 38);
+  color: white;
+  font-size: xx-small;
+  padding: 10px;
+}
+.hero .hero-text .reviews .five-stars {
+  align-items: center;
+  background: #EBE7E6;
+  color: #FEAB07;
+  display: flex;
+  font-size: 20px;
+  margin-top: 0;
+}
+.hero .hero-img {
+  background-image: url("/src/image/placeholder.jpg");
+  background-size: 100% 100%;
+  height: 60vh;
+  border-radius: 3px;
+}
+
+.card {
+  width: 200px;
+  margin: 1rem auto;
+  position: absolute;
+}
+.card .box {
+  height: 200px;
+  position: absolute;
+  width: 200px;
+  padding: 100px 20px 90px 20px;
+  background-image: linear-gradient(to bottom right, #C2C0C1, #EFEFEF);
+  border-radius: 30px;
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.card .box p {
+  text-transform: capitalize;
+}
+.card .plate {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  top: -90px;
+  border-radius: 50%;
+}
+.card .plate img {
+  width: 100%;
+  height: auto;
+}
+.card .cart {
+  position: absolute;
+  background-color: #000000;
+  top: -63px;
+  right: 18px;
+  height: 35px;
+  width: 35px;
+  color: white;
+  font-size: large;
+  padding: 7px;
+  border-radius: 10px 5px 60% 10px;
+}/*# sourceMappingURL=index.css.map */
