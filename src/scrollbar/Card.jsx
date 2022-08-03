@@ -10,9 +10,7 @@ const Card = ({text, url}) => {
         <div className="box">
           <p>{text}</p>
         </div>
-        <div className="plate">
           <img src={image} alt="text" />
-        </div>
         <div className="cart">
           <BsCartDash/>
         </div>
