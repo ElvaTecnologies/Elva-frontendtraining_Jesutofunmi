@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import 'mixins';
+
+$backgroundColor: #EBE7E6;
+$boxBackground: #D4D2D3;
+$red: #D31B27;
+$gray: #E4DEDE;
+$black: #000000;
+$lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$darkShadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
+$transition:  all 0.3s linear;
+$spacing: 0.05rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Philosopher', sans-serif;
+  background: $backgroundColor;
+  color: $black;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  padding: auto 3rem;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav{
+  .nav-center{
+    @include flex();
+    padding: 1rem 4rem;
+    max-width: 80%;
+    margin: 0 auto;
+
+    .nav-header{
+      p{
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: xx-large;
+
+        span{
+          color: $red;
+        }
+      }
+    }
+
+    .nav-links{
+      .links{
+        @include flex();
+        padding: 1rem;
+       
+        li{
+          padding: 0 1.5rem;
+          
+          
+          a{
+            color: $black;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            text-transform: capitalize;
+            letter-spacing: $spacing;
+          }
+          .home{
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .nav-right{
+      @include flex();
+
+      .icon-box{
+        margin-right: 1rem;
+        position: relative;
+
+        .icon-badge{
+          position: absolute;
+          background-color: $red;
+          padding: 3.5px;
+          @include border-radius(50%);
+          top: -2px;
+          left: 14px;
+        }
+
+        .icon{
+          font-size: large;
+        }
+      }
+
+      .nav-button{
+        @include button;
+        @include bordered;
+        @include border-radius(1.5rem)
+      }
+    }
+  }
+}
+
+.hero{
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
+ 
+
+
+  .hero-text{
+    padding: 2rem 0 0 2rem;
+    p{
+      font-weight: 700;
+      color: $black;
+      font-size: 60px;
+      line-height: 3.5rem;
+      letter-spacing: 0.15rem;
+    }
+    .hero-button{
+      button{
+        margin: 1rem 0.4rem 1rem 0;
+        @include button;
+        @include bordered;
+        @include border-radius(1.5rem)
+      }
+      .white-button{
+        background-color: white;
+        color: $black;
+        @include bordered($color:white)
+      }
+    }
+    .reviews{
+      margin-top: 1rem;
+      padding-left: 1rem;
+      p{
+        font-size: smaller;
+        font-weight: bold;
+        line-height: normal;
+        text-transform: capitalize;
+        letter-spacing: normal;
+        font-family: sans-serif;
+      }
+
+      .review-img{
+        position: relative;
+
+        .rounded{
+          width: 35px;
+          height: 35px;
+          @include bordered($color:white);
+          @include border-radius(50%);
+          display: inline-block;
+          margin-left: -13px;
+        }
+
+        .last{
+          position: absolute;
+          background-color: rgb(39, 38, 38);
+          color: white;
+          font-size: xx-small;
+          padding: 10px;
+  
+        }
+      }
+
+      .five-stars{
+        align-items: center;
+        background: $backgroundColor;
+        color: #FEAB07;
+        display: flex;
+        font-size: 15px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .hero-img{
+    position: relative;
+
+    .dish{
+      position: absolute;
+      height: 400px;
+      width: 450px;
+      left: 0px;
+      z-index: 2;
+    }
+
+    .tomato{
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      top: 90px;
+      right: 50px;
+      z-index: 1;
+    }
+
+    .tag{
+      position: absolute;
+      // width: 150px;
+      top: 30px;
+      left: 0px;
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 0.5rem;
+      @include border-radius(10px);
+
+      p{
+        font-size: x-small;
+
+        span{
+          color: $red;
+        }
+      }
+    }
+
+    .percent-icon{
+      position: absolute;
+      top: 20px;
+      left: 60px;
+      z-index: 4;
+      font-size: x-large;
+    }
+
+  }
+}
+
+.swiper {
+  // margin-top: 100px;
+  width: 80%;
+  height: 300px;
+
+  .swiper-wrapper{
+    margin: 0 10px;
+
+    .swiper-slide{
+      height: 300px;
+      margin-right: 0;
+  
+      .card{
+        width: 180px;
+        margin: 6rem auto;
+        position: relative;
+        .box{
+          height: 200px;
+          position: absolute;
+          width: 200px;
+          padding: 100px 20px 90px 20px;
+          background-image: linear-gradient(to bottom right, #C2C0C1, #EFEFEF);
+          @include border-radius(30px);
+          box-shadow: $darkShadow;
+      
+          p{
+            text-transform: capitalize;
+          }
+        }
+        
+        img{
+          position: absolute;
+          height: 165px;
+          width: 165px;
+          top: -90px;
+          left: 16px;
+          @include bordered($color: $backgroundColor);
+          @include border-radius(50%);
+        }
+      
+      
+        .cart{
+          position: absolute;
+          background-color: $black;
+          top: -63px;
+          right: -5px;
+          height: 35px;
+          width: 35px;
+          color: white;
+          font-size: large;
+          padding: 7px;
+          @include border-radius(10px 5px 60% 10px);
+          // @include border-radius(50%);
+        }
+      }
+    }
+  }
+}
+
+
+
+

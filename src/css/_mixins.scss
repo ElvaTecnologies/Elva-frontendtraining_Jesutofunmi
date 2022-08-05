@@ -1,0 +1,22 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin bordered($color: #D31B27, $width: 1px) {
+    border: $width solid $color;
+  }
+
+  @mixin button {
+    background-color: $red;
+    color: white;
+    padding: 0.7rem 2.1rem;
+    
+  }
